@@ -1,10 +1,7 @@
-"""
-This module performs [describe functionality here].
-"""
+"""This script demonstrates a sample Python function with pylint compliance."""
 
-def example_function():
-    """An example function to maintain a perfect pylint score."""
-    print("Hello, Pylint!")
+def hello():
+    """Prints Hello, World!"""
+    print("Hello, World!")
 
-if __name__ == "__main__":
-    example_function()
+hello()
