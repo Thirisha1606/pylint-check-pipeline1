@@ -20,9 +20,14 @@ jobs:
       - name: Run pylint
         id: pylint_check
         run: |
-          SCORE=$(pylint script.py | awk -F '[ /]' '/rated at/ {print $(NF-1)}')
+          SCORE=$(pylint script.py | grep "rated at" | awk '{print $(NF-1)}')
           if (( $(echo "$SCORE < 10" | bc -l) )); then
             echo "Pylint score is $SCORE/10. Failing pipeline!"
             exit 1
           else
             echo "Pylint score is 10/10. Passed!"
+          fi
+
+      - name: Fail job if pylint score is low
+        if: failure()
+        run: exit 1
