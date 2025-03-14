@@ -26,5 +26,5 @@ jobs:
 
       - name: Run Pylint
         run: |
-          pylint **/*.py || true
+           run: pylint $(git ls-files '*.py')
  
