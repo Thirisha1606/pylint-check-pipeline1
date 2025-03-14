@@ -1,9 +1,5 @@
-"""
-This is a sample script.
-"""
-
 def greet():
-    """Returns a greeting message."""
+    """Returns a greeting."""
     return "Hello, Pylint!"
 
 print(greet())  # No blank lines after this
