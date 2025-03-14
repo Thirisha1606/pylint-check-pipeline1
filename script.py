@@ -1,10 +1,10 @@
 """
-This is a sample script to demonstrate Pylint checks.
+This is a sample script.
 """
 
 def greet():
     """Returns a greeting message."""
     return "Hello, Pylint!"
 
-print(greet())
+print(greet())  # No blank lines after this
 
